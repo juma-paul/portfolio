@@ -1,75 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <link rel="stylesheet" href="./style.css"/>
-    <title>Juma R. Paul</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Juma</title>
+  </head>
+  <body>
     <header id="header">
-        <nav>
-            <a href="#home" class="logo">Portfolio Website</a>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <a href="#home" class="logo">Portfolio Website</a>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="main">
-        <!--- Homepage -->
-        <section id="home">
-            <h1>Raul Alquatra</h1>
-            <h3>Software Engineer</h3>
-            <p>I'm a Computer Science graduate with a focused on building software and <br />
-            AI solutions that solve real-world problems.</p>
-            <a href="#projects" class="cta-button">Take a look at what I've built</a>
-        </section>
+      <!--- Homepage -->
+      <section id="home">
+        <h1>Raul Alquatra</h1>
+        <h3>Software Engineer</h3>
+        <p>
+          I'm a Computer Science graduate with a focused on building software
+          and <br />
+          AI solutions that solve real-world problems.
+        </p>
+        <a href="#projects" class="cta-button"
+          >Take a look at what I've built</a
+        >
+      </section>
 
-        <!-- About Section -->
-        <section id="about">
-            <img src="./assets/images/head-shot.jpg" alt="Juma's photo">
-            <p>I enjoy making complex technology useful for people and organizations. <br />
-            I'm always curious, eager to learn, and looking to collaborate on projects <br />
-            that make a real difference.</p>
+      <!-- About Section -->
+      <section id="about">
+        <img src="./assets/images/head-shot.jpg" alt="Juma's photo" />
+        <p>
+          I enjoy making complex technology useful for people and organizations.
+          <br />
+          I'm always curious, eager to learn, and looking to collaborate on
+          projects <br />
+          that make a real difference.
+        </p>
 
-            <div class="skills-container">
-                <div class="skills-column">
-                    <h4>Coding skills</h4>
-                    <div class="skill">
-                        <span>Backend (Node.js, Express, FastAPI, Flask)</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <!--More skills-->
-                </div>
-                <div class="skills-column">
-                    <h4>Other skills</h4>
-                    <div class="skill">
-                        <span>Leadership</span>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <!--More skills-->
-                </div>
-                
+        <div class="skills-container">
+          <div class="skills-column">
+            <h4>Coding skills</h4>
+            <div class="skill">
+              <span>Backend (Node.js, Express, FastAPI, Flask)</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
             </div>
-            <a href="./assets/resume.pdf" download class="cta-button">Resume</a>
-        </section>
+            <!--More skills-->
+          </div>
+          <div class="skills-column">
+            <h4>Other skills</h4>
+            <div class="skill">
+              <span>Leadership</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <!--More skills-->
+          </div>
+        </div>
+        <a href="./assets/resume.pdf" download class="cta-button">Resume</a>
+      </section>
 
-        <section id="projects">Projects</section>
-        <section id="blog">Blog</section>
-        <section id="contact">Contact</section>
+      <section id="projects">
+        <h2>My Projects</h2>
+        <div class="filter-buttons">
+          <button data-category="all">All</button>
+          <button data-category="full-stack">Full Stack</button>
+          <button data-category="backend">Backend/APIs</button>
+          <button data-category="data-science">Data Science/ML</button>
+          <button data-category="tools">Tools & CLI</button>
+        </div>
+        <div class="projects-grid" id="projects-container">
+          <div class="projects-card">
+            <img src="image" alt="" />
+            <h3>title</h3>
+            <ul class="project-skills">
+              <li>Python</li>
+              <li>Javascript</li>
+            </ul>
+            <p>Description</p>
+            <div class="project-links">
+              <a href="#">GitHub</a>
+              <a href="#">Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-grid" id="blog-container">
+          <div class="blog-preview">
+            <img src="Preview" alt="" />
+            <h3>Title</h3>
+            <p>Excerpt/preview text</p>
+            <time datetime="2025-01-15">January 15, 2024</time>
+            <div class="blog-tags">
+              <span>Javascript</span>
+              <span>Tutorial</span>
+            </div>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="send-email">
+          <form action="">
+            <input type="text" name="name" placeholder="What's your name?" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email address"
+            />
+            <input type="text" name="subject" placeholder="Email subject" />
+            <textarea
+              name="message"
+              placeholder="Enter your message"
+            ></textarea>
+            <button type="submit">Send message</button>
+          </form>
+        </div>
+      </section>
     </main>
-    
-    <script type="module" src="./script.js"></script>
-</body>
 
+    <!-- Footer -->
+    <footer>
+      <div class="quick-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="social-links">
+        <a href="#">Github</a>
+        <a href="#">Linkedln</a>
+        <a href="#">X</a>
+      </div>
+
+      <p>&copy; 2025 Raul Alquatra</p>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
 </html>
