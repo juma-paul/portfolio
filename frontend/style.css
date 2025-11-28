@@ -56,7 +56,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Style Header */
+/* ------------- Styles: Header ------------- */
 header {
   top: 0;
   position: sticky;
@@ -80,14 +80,58 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: var(--font-weight-bold);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
 }
 
 nav ul a {
-    color: var(--text-primary);
+  color: var(--text-primary);
 }
 
 nav ul a:hover {
   color: var(--primary);
+}
+
+/* ------------- Styles: Home section ------------- */
+#home {
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  background-size: 20px 20px, cover;
+}
+
+#home h1 {
+  font-size: 4rem;
+}
+
+#home h3 {
+  font-size: 2rem;
+}
+
+#home p {
+  font-size: 1.5rem;
+}
+
+#home a {
+  font-size: 1rem;
+}
+
+#home .cta-button {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: var(--spacing-sm);
+  border-radius: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#home .cta-button:hover {
+    background-color: #1946a8;
+    transform: scale(1.05);
 }
