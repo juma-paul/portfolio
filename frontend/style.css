@@ -37,3 +37,21 @@
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
 }
+
+/* Set Defaults */
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+html {
+    scroll-behavior: smooth;
+}
