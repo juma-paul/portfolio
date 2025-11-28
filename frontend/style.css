@@ -26,7 +26,7 @@
   /* Font family, sizes and weight */
   --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     sans-serif;
-  --font-size-base: 16px;
+  --font-size-base: 20px;
   --font-weight-normal: 400;
   --font-weight-bold: 600;
 
@@ -40,18 +40,54 @@
 
 /* Set Defaults */
 body {
-    font-family: var(--font-primary);
-    font-size: var(--font-size-base);
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    line-height: 1.6;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 a {
-    text-decoration: none;
-    color: var(--primary);
+  text-decoration: none;
+  color: var(--primary);
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+/* Style Header */
+header {
+  top: 0;
+  position: sticky;
+  padding: var(--spacing-md);
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+}
+
+nav ul a {
+    color: var(--text-primary);
+}
+
+nav ul a:hover {
+  color: var(--primary);
 }
