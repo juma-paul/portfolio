@@ -10,10 +10,10 @@
   /* Light Mode colors */
   --primary: #2563eb;
   --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
+  --bg-secondary: #e0f0ff;
   --text-primary: #1e293b;
   --text-secondary: #64748b;
-  --border: #e2e8f0;
+  --border: #d2dded;
 
   /* Dark Mode Colors */
   --primary-dark: #3b82f6;
@@ -75,12 +75,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 0 var(--spacing-md);
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: var(--font-weight-bold);
 }
 
@@ -92,16 +93,21 @@ nav ul a:hover {
   color: var(--primary);
 }
 
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 /* ------------- Styles: Home section ------------- */
 #home {
   text-align: center;
-  min-height: 60vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: radial-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    linear-gradient(135deg, #e0f0ff 0%, #d0e8ff 100%);
   background-size: 20px 20px, cover;
 }
 
@@ -132,6 +138,121 @@ nav ul a:hover {
 }
 
 #home .cta-button:hover {
-    background-color: #1946a8;
-    transform: scale(1.05);
+  background-color: #1946a8;
+  transform: scale(1.05);
+}
+
+/* ------------- Styles: About section ------------- */
+/* Image and Intro */
+#about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#about img.profile-img {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  height: 300px;
+  width: 300px;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+#about .about-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+#about .about-intro p {
+  text-align: justify;
+}
+
+/* Acievements */
+.achievements {
+  padding-bottom: 1rem;
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.achievements ul {
+  list-style: disc;
+  padding-left: var(--spacing-md);
+}
+
+.achievement-item h4 {
+  font-weight: var(--font-weight-bold);
+}
+
+.achievement-item p {
+  font-style: italic;
+}
+
+/* Skills */
+.skills-grid {
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.skills-box {
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 70, 0.1);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.skills-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 70, 0.1);
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xs);
+}
+
+.skills-list div {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.skills-list i {
+  font-size: 1.75rem;
+}
+
+.skills-list img {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Resume download button */
+.resume-button {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: var(--spacing-sm);
+  border-radius: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #1946a8;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+#projects {
+    padding-bottom: 5rem;
 }
