@@ -79,6 +79,7 @@ h3 {
 header {
   top: 0;
   position: sticky;
+  z-index: 1000;
   padding: var(--spacing-md);
   background-color: var(--bg-primary);
   border-bottom: 1px solid var(--border);
@@ -123,6 +124,7 @@ nav ul a.active {
 main {
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 var(--spacing-lg);
 }
 
 /* ------------- Styles: Home section ------------- */
@@ -171,7 +173,7 @@ main {
   transform: scale(1.05);
 }
 
-/* ------------- Styles: About section ------------- */
+/* ------------- About section ------------- */
 /* Image and Intro */
 #about {
   padding-top: 5rem;
@@ -179,23 +181,25 @@ main {
 }
 
 #about img.profile-img {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  height: 300px;
-  width: 300px;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
   border-radius: 1.5rem;
   object-fit: cover;
 }
 
 #about .about-intro {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: var(--spacing-lg);
 }
 
 #about .about-intro p {
   text-align: justify;
+  flex: 1 1 300px;
 }
 
 /* Acievements */
@@ -220,9 +224,6 @@ main {
 }
 
 /* Skills */
-.skills-container {
-  padding: 0 1.5rem;
-}
 .skills-grid {
   padding-top: var(--spacing-md);
   padding-bottom: var(--spacing-md);
@@ -286,9 +287,10 @@ main {
   margin-top: var(--spacing-lg);
 }
 
-/* Projects section */
+/* ------------- Projects section ------------- */
 #projects {
   padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .filter-buttons {
@@ -296,16 +298,18 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-lg);
-  font-size: clamp(0.5rem, 1vw + 0.4rem, 2rem);
+  gap: clamp(0.5rem, 2vw, var(--spacing-lg));
+  flex-wrap: wrap;
 }
 
 .filter-buttons button {
-  padding: 0.5rem 1.5rem;
+  padding: clamp(0.25rem, 1vw, 0.5rem) clamp(0.75rem, 2vw, 1.5rem);
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-weight: bold;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  min-height: 2.25rem;
 }
 
 .filter-buttons button:hover {
@@ -321,7 +325,6 @@ main {
 .projects-grid {
   display: grid;
   gap: var(--spacing-lg);
-  padding: 0 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
 
@@ -340,7 +343,7 @@ main {
 
 .projects-card img {
   width: 100%;
-  height: 15rem;
+  height: auto;
   object-fit: cover;
   border-radius: 0.75rem 0.75rem 0 0;
   margin-bottom: 0.5rem;
@@ -371,7 +374,7 @@ main {
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
   text-align: justify;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 .project-links {
@@ -395,4 +398,100 @@ main {
 
 .project-links a:hover {
   color: #00317a;
+}
+
+/* ------------- Blog section ------------- */
+#blog {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+/* Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* individual card */
+.blog-preview {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+  padding: 1rem;
+  border: 1px solid var(--bg-secondary);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.blog-preview:hover {
+  border: 1px solid goldenrod;
+  /* transform: translateY(-5px); */
+}
+
+/* image */
+.blog-preview img {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 200px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* content */
+.blog-content {
+  flex-grow: 2;
+  flex-shrink: 1;
+  flex-basis: 300px;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .blog-preview p {
+    display: none;
+  }
+  .blog-tags {
+    display: none;
+  }
+}
+
+.blog-preview h4 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.blog-meta {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.blog-preview p {
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xs);
+}
+
+.blog-tags span {
+  padding: 0.2rem 1rem;
+  color: var(--text-primary);
+  border-radius: 2rem;
+  background-color: var(--bg-secondary);
+}
+
+/* ------------- Contact section ------------- */
+#contact {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
