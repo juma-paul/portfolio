@@ -495,3 +495,61 @@ main {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+
+.send-email form {
+  max-width: 37.5rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.send-email input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
+.form-row input {
+  flex: 1 1 200px; 
+}
+
+
+.send-email textarea {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  min-height: 9.5rem;
+  resize: vertical;
+}
+
+.send-message {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.send-message:hover {
+  background-color: #1946a8;
+}
+
+.send-message:focus {
+  outline: none;
+}
