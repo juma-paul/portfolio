@@ -109,16 +109,19 @@ nav {
 nav ul a {
   color: var(--text-primary);
   background-color: transparent;
-  padding: 0 1rem;
+  padding: 0.5rem 1.5rem;  
   border-radius: 2rem;
 }
 
-nav ul a:hover {
-  color: var(--primary);
-}
 nav ul a.active {
   color: var(--primary);
+  background-color: whitesmoke;
   font-weight: var(--font-weight-bold);
+}
+
+
+nav ul a:hover {
+  color: var(--primary);
 }
 
 main {
