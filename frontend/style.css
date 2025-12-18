@@ -120,15 +120,9 @@ h3 {
 }
 
 .logo-text {
-  font-size: 1.25rem;
+  white-space: nowrap;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   color: var(--text-primary);
-}
-
-/* Mobile: Hide text, show badge only */
-@media (max-width: 640px) {
-  .logo-text {
-    display: none;
-  }
 }
 
 /* ------------- Header ------------- */
@@ -183,6 +177,46 @@ main {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--spacing-lg);
+}
+
+/* ------------- Hamburger icon ------------- */
+
+/* Mobile menu toggle button - hidden by default */
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+/* Show hamburger on small screens */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-primary);
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
+
+.nav-controls {
+  display: flex;
+  gap: 1rem;
 }
 
 /* ------------- Styles: Home section ------------- */
@@ -241,7 +275,7 @@ main {
 #about img.profile-img {
   width: 100%;
   height: auto;
-  max-width: 300px;
+  max-width: 280px;
   aspect-ratio: 1 / 1;
   border-radius: 1.5rem;
   object-fit: cover;
@@ -256,21 +290,35 @@ main {
 }
 
 #about .about-intro p {
-  text-align: justify;
+  flex: 1 1 300px;
+  max-width: 75ch;
+  line-height: 1.6;
+  text-align: left;
+}
+
+#about .about-intro p {
+  text-align: left;
+  line-height: 1.6;
+  max-width: 75ch;
   flex: 1 1 300px;
 }
 
 /* Acievements */
 .achievements {
-  padding-bottom: 1rem;
   display: flex;
-  gap: var(--spacing-lg);
   flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  padding-bottom: 1rem;
+  align-items: flex-start;
 }
 
 .achievements ul {
   list-style: disc;
   padding-left: var(--spacing-md);
+}
+
+.achievement-item {
+  max-width: 100ch;
 }
 
 .achievement-item h4 {
@@ -279,34 +327,35 @@ main {
 
 .achievement-item p {
   font-style: italic;
+  color: var(--text-secondary);
 }
 
 /* Skills */
 .skills-grid {
-  padding-top: var(--spacing-md);
-  padding-bottom: var(--spacing-md);
-  gap: var(--spacing-lg);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: var(--spacing-lg);
+  padding-block: var(--spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
 }
 
 .skills-box {
+  display: grid;
+  gap: var(--spacing-sm);
   background-color: var(--bg-secondary);
   padding: 1rem;
-  box-shadow: 0 5px 20px rgba(0, 0, 70, 0.1);
   border-radius: 0.75rem;
-  transition: all 0.3s ease;
-  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 5px 20px rgba(0, 0, 70, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .skills-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
 }
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
   gap: var(--spacing-xs);
 }
 
@@ -669,5 +718,3 @@ footer p {
   cursor: pointer;
   padding: 0.5rem;
 }
-
-

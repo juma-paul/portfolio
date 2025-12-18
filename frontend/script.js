@@ -107,8 +107,27 @@ themeToogle.textContent = currentTheme === "dark" ? "☀️" : "🌙";
 
 // Toggle theme on button click
 themeToogle.addEventListener("click", () => {
-  const newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark"
-  html.setAttribute("data-theme", newTheme)
-  localStorage.setItem("theme", newTheme)
-  themeToogle.textContent = newTheme === "dark" ? "☀️" : "🌙"
-})
+  const newTheme =
+    html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  html.setAttribute("data-theme", newTheme);
+  localStorage.setItem("theme", newTheme);
+  themeToogle.textContent = newTheme === "dark" ? "☀️" : "🌙";
+});
+
+// =============================
+// MOBILE MENU TOGGLE
+// =============================
+
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+// Close menu when clicking nav links
+document.querySelectorAll(".nav-menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+  });
+});
