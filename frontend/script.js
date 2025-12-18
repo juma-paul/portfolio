@@ -92,3 +92,23 @@ const yearEl = document.getElementById("copyright-year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
+
+// =============================
+// DARK MODE TOGGLE
+// =============================
+
+const themeToogle = document.getElementById("theme-toggle");
+const html = document.documentElement;
+
+// Check for saved theme preference
+const currentTheme = localStorage.getItem("theme") || "light";
+html.setAttribute("data-theme", currentTheme);
+themeToogle.textContent = currentTheme === "dark" ? "☀️" : "🌙";
+
+// Toggle theme on button click
+themeToogle.addEventListener("click", () => {
+  const newTheme = html.getAttribute("data-theme") === "dark" ? "light" : "dark"
+  html.setAttribute("data-theme", newTheme)
+  localStorage.setItem("theme", newTheme)
+  themeToogle.textContent = newTheme === "dark" ? "☀️" : "🌙"
+})

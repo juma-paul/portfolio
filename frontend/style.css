@@ -11,17 +11,25 @@
   --primary: #2563eb;
   --bg-primary: #ffffff;
   --bg-secondary: #e0f0ff;
+  --bg-tertiary: #bfdbfe;
   --text-primary: #1e293b;
   --text-secondary: #64748b;
   --border: #d2dded;
+  --primary-hover: #1946a8;
+  --text-accent: #789cce;
+  --text-on-primary: #f5f5f5;
 
   /* Dark Mode Colors */
   --primary-dark: #3b82f6;
   --bg-primary-dark: #0f172a;
   --bg-secondary-dark: #1e293b;
+  --bg-tertiary-dark: #334155;
   --text-primary-dark: #f1f5f9;
   --text-secondary-dark: #94a3b8;
   --border-dark: #334155;
+  --primary-hover-dark: #2563eb;
+  --text-accent-dark: #94a3b8;
+  --text-on-primary-dark: #ffffff;
 
   /* Font family, sizes and weight */
   --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -36,6 +44,19 @@
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
+}
+
+[data-theme="dark"] {
+  --primary: var(--primary-dark);
+  --bg-primary: var(--bg-primary-dark);
+  --bg-secondary: var(--bg-secondary-dark);
+  --bg-tertiary: var(--bg-tertiary-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --border: var(--border-dark);
+  --primary-hover: var(--primary-hover-dark);
+  --text-accent: var(--text-accent-dark);
+  --text-on-primary: var(--text-on-primary-dark);
 }
 
 /* Set Defaults */
@@ -72,10 +93,45 @@ h3 {
   font-size: 1.5rem;
   font-weight: var(--font-weight-normal);
   margin-bottom: var(--spacing-md);
-  color: #789cce;
+  color: var(--text-accent);
 }
 
-/* ------------- Styles: Header ------------- */
+/* ------------- Logo ------------- */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.logo-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary) 0%, #1e40af 100%);
+  color: white;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+/* Mobile: Hide text, show badge only */
+@media (max-width: 640px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+/* ------------- Header ------------- */
 header {
   top: 0;
   position: sticky;
@@ -109,16 +165,15 @@ nav {
 nav ul a {
   color: var(--text-primary);
   background-color: transparent;
-  padding: 0.5rem 1.5rem;  
+  padding: 0.5rem 1.5rem;
   border-radius: 2rem;
 }
 
 nav ul a.active {
   color: var(--primary);
-  background-color: whitesmoke;
+  background-color: var(--bg-secondary);
   font-weight: var(--font-weight-bold);
 }
-
 
 nav ul a:hover {
   color: var(--primary);
@@ -138,8 +193,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(var(--border) 1px, transparent 1px),
-    linear-gradient(135deg, #e0f0ff 0%, #d0e8ff 100%);
+  background: radial-gradient(var(--text-secondary) 0.01rem, transparent 1px),
+    linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
   background-size: 20px 20px, cover;
 }
 
@@ -149,7 +204,7 @@ main {
 
 #home h3 {
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: #0f172a;
+  color: var(--text-primary);
 }
 
 #home p {
@@ -163,7 +218,7 @@ main {
 
 #home .cta-button {
   background-color: var(--primary);
-  color: #ffffff;
+  color: var(--text-on-primary);
   padding: var(--spacing-sm);
   border-radius: 0.75rem;
   font-weight: var(--font-weight-bold);
@@ -172,7 +227,7 @@ main {
 }
 
 #home .cta-button:hover {
-  background-color: #1946a8;
+  background-color: var(--primary-hover);
   transform: scale(1.05);
 }
 
@@ -236,7 +291,7 @@ main {
 }
 
 .skills-box {
-  background-color: #ffffff;
+  background-color: var(--bg-secondary);
   padding: 1rem;
   box-shadow: 0 5px 20px rgba(0, 0, 70, 0.1);
   border-radius: 0.75rem;
@@ -273,7 +328,7 @@ main {
 /* Resume download button */
 .resume-button {
   background-color: var(--primary);
-  color: #ffffff;
+  color: var(--text-on-primary);
   padding: var(--spacing-sm);
   border-radius: 0.75rem;
   font-weight: var(--font-weight-bold);
@@ -282,7 +337,7 @@ main {
 }
 
 .resume-button:hover {
-  background-color: #1946a8;
+  background-color: var(--primary-hover);
 }
 
 .button-container {
@@ -309,10 +364,12 @@ main {
   padding: clamp(0.25rem, 1vw, 0.5rem) clamp(0.75rem, 2vw, 1.5rem);
   border: none;
   background-color: transparent;
+  color: var(--text-primary);
   cursor: pointer;
   font-weight: bold;
   font-size: clamp(0.875rem, 2vw, 1rem);
   min-height: 2.25rem;
+  transition: all 0.3s ease;
 }
 
 .filter-buttons button:hover {
@@ -320,7 +377,7 @@ main {
 }
 
 .filter-buttons button.active {
-  color: #ffffff;
+  color: var(--text-on-primary);
   font-weight: var(--font-weight-bold);
   background-color: var(--primary);
 }
@@ -332,7 +389,7 @@ main {
 }
 
 .projects-card {
-  background-color: #ffffff;
+  background-color: var(--bg-secondary);
   padding: 2rem;
   border-radius: 0.75rem;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
@@ -366,7 +423,7 @@ main {
 }
 
 .project-skills li {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-tertiary);
   padding: 0.1rem 0.75rem;
   border-radius: 1rem;
   font-size: 0.75rem;
@@ -429,8 +486,7 @@ main {
 }
 
 .blog-preview:hover {
-  border: 1px solid goldenrod;
-  /* transform: translateY(-5px); */
+  border: 1px solid var(--primary);
 }
 
 /* image */
@@ -531,7 +587,7 @@ main {
   border-radius: 0.75rem;
   font-size: 1rem;
   font-family: inherit;
-  min-height: 9.5rem;
+  min-height: 25rem;
   resize: vertical;
 }
 
@@ -539,7 +595,7 @@ main {
   width: 100%;
   margin: 0 auto;
   background-color: var(--primary);
-  color: #fff;
+  color: var(--text-on-primary);
   padding: 0.75rem 2rem;
   border-radius: 0.75rem;
   font-weight: var(--font-weight-bold);
@@ -549,7 +605,7 @@ main {
 }
 
 .send-message:hover {
-  background-color: #1946a8;
+  background-color: var(--primary-hover);
 }
 
 .send-message:focus {
@@ -604,3 +660,14 @@ footer p {
   font-size: 0.875rem;
   margin-top: var(--spacing-md);
 }
+
+/* ------------- Dark Mode ------------- */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+
