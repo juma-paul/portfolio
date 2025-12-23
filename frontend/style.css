@@ -332,30 +332,35 @@ main {
 
 /* Skills */
 .skills-grid {
-  display: grid;
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
   gap: var(--spacing-lg);
-  padding-block: var(--spacing-md);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 }
 
 .skills-box {
-  display: grid;
-  gap: var(--spacing-sm);
   background-color: var(--bg-secondary);
   padding: 1rem;
-  border-radius: 0.75rem;
   box-shadow: 0 5px 20px rgba(0, 0, 70, 0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.skills-box h4 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .skills-box:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-xs);
 }
 
@@ -452,7 +457,7 @@ main {
 
 .projects-card img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 0.75rem 0.75rem 0 0;
   margin-bottom: 0.5rem;
