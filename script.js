@@ -134,7 +134,7 @@ const themeToogle = document.getElementById("theme-toggle");
 const html = document.documentElement;
 
 // Check for saved theme preference
-const currentTheme = localStorage.getItem("theme") || "dark";
+const currentTheme = localStorage.getItem("theme") || "light";
 html.setAttribute("data-theme", currentTheme);
 themeToogle.textContent = currentTheme === "dark" ? "☀️" : "🌙";
 
