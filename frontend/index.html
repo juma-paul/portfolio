@@ -407,7 +407,7 @@
       <section id="blog">
         <h2>Blog</h2>
         <!-- Placeholder 1 -->
-        <div class="blog-grid" id="blog-container">
+        <div id="blog-container">
           <a href="#" class="blog-preview">
             <img src="assets/images/head-shot.jpg" alt="cover image" />
             <div class="blog-content">
@@ -428,11 +428,10 @@
               </div>
             </div>
           </a>
-        </div>
 
-        <!-- Placeholder 2 -->
-        <div class="blog-grid" id="blog-container">
-          <a href="#" class="blog-preview">
+          <!-- Placeholder 2 -->
+
+          <a href="#" class="blog-preview" data-post-id="1">
             <img src="assets/images/head-shot.jpg" alt="cover image" />
             <div class="blog-content">
               <h4>Building My First Full-Stack App: Lessons Learned</h4>
@@ -484,6 +483,12 @@
         </div>
       </section>
     </main>
+
+    <!-- Full post section -->
+      <div id="full-post" style="display: none">
+        <article id="post-content"></article>
+        <button id="back-to-blog">← Back to Blog</button>
+      </div>
 
     <!-- Footer -->
     <footer>
