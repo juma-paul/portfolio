@@ -38,3 +38,4 @@ jobs:
           target-folder: .
           clean: true
           force: true
+          respect-gitignore: false
