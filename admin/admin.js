@@ -1,4 +1,4 @@
-import { db, storage, auth } from "../firebase-config.js";
+import { db, storage, auth } from "../firebase-config.template.js";
 import {
   collection,
   addDoc,
@@ -7,17 +7,17 @@ import {
   doc,
   updateDoc,
   deleteDoc,
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 import {
   ref,
   uploadBytes,
   getDownloadURL,
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js";
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-storage.js";
 import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
 
 //========================
 // Cache DOM elements
