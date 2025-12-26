@@ -781,6 +781,13 @@ footer {
   margin-bottom: var(--spacing-md);
 }
 
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .social-links a {
   display: inline-flex;
   gap: var(--spacing-sm);

@@ -3,3 +3,4 @@
 .firebaserc
 firebase.json
 public/
+firebase-config.js
