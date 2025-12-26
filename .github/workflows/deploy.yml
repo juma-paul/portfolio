@@ -27,6 +27,9 @@ jobs:
       - name: Inject TinyMCE key into HTML
         run: |
           sed -i "s/TINYMCE_API_KEY_PLACEHOLDER/${{ secrets.TINYMCE_API_KEY }}/g" admin/index.html
+      
+      - name: Remove template file
+        run: rm firebase-config.template.js
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
