@@ -31,6 +31,11 @@ jobs:
       - name: Remove template file
         run: rm firebase-config.template.js
 
+      - name: Allow firebase-config.js to be deployed
+        run: |
+          sed -i '/firebase-config.js/d' .gitignore
+
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
