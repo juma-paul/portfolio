@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Portfolio</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script
+      src="https://cdn.tiny.cloud/1/TINYMCE_API_KEY_PLACEHOLDER/tinymce/8/tinymce.min.js"
+      referrerpolicy="origin"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Login Section -->
+    <div id="login-section">
+      <div class="login-container">
+        <h1>Admin Login</h1>
+        <form id="login-form">
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p id="login-error" class="error-message"></p>
+      </div>
+    </div>
+
+    <!-- Dashboard Section (hidden by default) -->
+    <div id="dashboard" style="display: none">
+      <header class="dashboard-header">
+        <h1>Portfolio Admin Panel</h1>
+        <button id="logout-btn">Logout</button>
+      </header>
+
+      <nav class="dashboard-nav">
+        <button class="nav-btn active" data-section="projects">Projects</button>
+        <button class="nav-btn" data-section="blog">Blog Posts</button>
+      </nav>
+
+      <main id="dashboard-content">
+        <!-- Projects Section -->
+        <div id="projects-section" class="section">
+          <div class="section-header">
+            <h2>Manage Projects</h2>
+            <button id="add-project-btn" class="btn-primary">
+              + Add Project
+            </button>
+          </div>
+
+          <div id="projects-list">
+            <!-- Project cards will be loaded here by JavaScript -->
+          </div>
+
+          <!-- Add/Edit Project Form (hidden by default) -->
+          <div id="project-form-container" style="display: none">
+            <h3 id="project-form-title">Add New Project</h3>
+            <form id="project-form">
+              <input
+                type="text"
+                id="project-title"
+                placeholder="Project Title"
+                required
+              />
+              <textarea
+                id="project-description"
+                placeholder="Project Description"
+                required
+              ></textarea>
+              <input type="url" id="project-github" placeholder="GitHub URL" />
+              <input type="url" id="project-live" placeholder="Live Demo URL" />
+              <input type="file" id="project-image" accept="image/*" />
+              <input
+                type="text"
+                id="project-skills"
+                placeholder="Skills (comma-separated)"
+              />
+              <select id="project-category" required>
+                <option value="">Select Category</option>
+                <option value="full-stack">Full Stack</option>
+                <option value="backend">Backend/APIs</option>
+                <option value="data-science">Data Science/ML</option>
+                <option value="tools">Tools & CLI</option>
+              </select>
+              <div class="form-buttons">
+                <button type="submit" class="btn-primary">Save Project</button>
+                <button
+                  type="button"
+                  id="cancel-project-btn"
+                  class="btn-secondary"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Blog Section -->
+        <div id="blog-section" class="section" style="display: none">
+          <div class="section-header">
+            <h2>Manage Blog Posts</h2>
+            <button id="add-blog-btn" class="btn-primary">
+              + Add Blog Post
+            </button>
+          </div>
+
+          <div id="blog-list">
+            <!-- Blog post cards will be loaded here by JavaScript -->
+          </div>
+
+          <!-- Add/Edit Blog Form (hidden by default) -->
+          <div id="blog-form-container" style="display: none">
+            <h3 id="blog-form-title">Add New Blog Post</h3>
+            <form id="blog-form">
+              <input
+                type="text"
+                id="blog-title"
+                placeholder="Post Title"
+                required
+              />
+              <input type="file" id="blog-image" accept="image/*" />
+              <textarea
+                id="blog-excerpt"
+                placeholder="Short excerpt (150-200 chars)"
+                maxlength="200"
+                required
+              ></textarea>
+              <textarea id="editor-container"></textarea>
+              <input
+                type="text"
+                id="blog-tags"
+                placeholder="Tags (comma-separated)"
+              />
+              <label>
+                <input type="checkbox" id="blog-published" /> Published
+              </label>
+              <div class="form-buttons">
+                <button type="submit" class="btn-primary">Save Post</button>
+                <button
+                  type="button"
+                  id="cancel-blog-btn"
+                  class="btn-secondary"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="admin.js"></script>
+    <script>
+      tinymce.init({
+        selector: "#editor-container",
+        plugins: [
+          // Core editing features
+          "anchor",
+          "autolink",
+          "charmap",
+          "codesample",
+          "emoticons",
+          "link",
+          "lists",
+          "media",
+          "searchreplace",
+          "table",
+          "visualblocks",
+          "wordcount",
+          // Your account includes a free trial of TinyMCE premium features
+          // Try the most popular premium features until Jan 6, 2026:
+          "checklist",
+          "mediaembed",
+          "casechange",
+          "formatpainter",
+          "pageembed",
+          "a11ychecker",
+          "tinymcespellchecker",
+          "permanentpen",
+          "powerpaste",
+          "advtable",
+          "advcode",
+          "advtemplate",
+          "ai",
+          "uploadcare",
+          "mentions",
+          "tinycomments",
+          "tableofcontents",
+          "footnotes",
+          "mergetags",
+          "autocorrect",
+          "typography",
+          "inlinecss",
+          "markdown",
+          "importword",
+          "exportword",
+          "exportpdf",
+        ],
+        toolbar:
+          "undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography uploadcare | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat",
+        tinycomments_mode: "embedded",
+        tinycomments_author: "Author name",
+        mergetags_list: [
+          { value: "First.Name", title: "First Name" },
+          { value: "Email", title: "Email" },
+        ],
+        ai_request: (request, respondWith) =>
+          respondWith.string(() =>
+            Promise.reject("See docs to implement AI Assistant")
+          ),
+        uploadcare_public_key: "1b99de929e94663c89ff",
+      });
+    </script>
+  </body>
+</html>
