@@ -31,12 +31,6 @@ jobs:
       - name: Remove template file
         run: rm firebase-config.template.js
 
-      - name: Force add firebase-config.js
-        run: |
-          git add -f firebase-config.js
-          git status
-
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
