@@ -383,3 +383,11 @@ async function loadProjectsFromFirebase() {
 
 // Call on page load
 loadProjectsFromFirebase();
+
+document
+  .querySelector(".send-email form")
+  .addEventListener("submit", function (e) {
+    setTimeout(() => {
+      this.reset();
+    }, 1000);
+  });
