@@ -386,8 +386,17 @@ loadProjectsFromFirebase();
 
 document
   .querySelector(".send-email form")
-  .addEventListener("submit", function (e) {
-    setTimeout(() => {
+  .addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const response = await fetch(this.action, {
+      method: "POST",
+      body: new FormData(this),
+      headers: { Accept: "application/json" },
+    });
+
+    if (response.ok) {
+      alert("Message sent successfully!");
       this.reset();
-    }, 1000);
+    }
   });
