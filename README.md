@@ -34,16 +34,11 @@ A modern, responsive portfolio website showcasing my projects, blog posts, and p
 - Firebase Hosting (Admin panel)
 - GitHub Actions (CI/CD)
 
-## 📁 Project Structure
-portfolio/ ├── index.html # Main portfolio page ├── script.js # Frontend JavaScript ├── style.css # Styles and responsive design ├── firebase-config.js # Firebase configuration ├── admin/ # Admin panel (private) │ ├── index.html │ ├── admin.js │ └── admin.css └── assets/ # Images and static files
-
-Copied!
 ## 🚀 Local Development
 
 1. **Clone the repository**
 git clone https://github.com/yourusername/portfolio.git cd portfolio
 
-Copied!
 2. **Set up Firebase**
 - Create a Firebase project at [firebase.google.com](https://firebase.google.com)
 - Enable Firestore, Storage, and Authentication
@@ -54,11 +49,10 @@ Use any local server, for example:
 python -m http.server 8000
 
 Or use Live Server in VS Code
-Copied!
+
 4. **View in browser**
 http://localhost:8000
 
-Copied!
 ## 🔒 Security
 
 - Firebase security rules protect database writes
@@ -100,13 +94,3 @@ MIT License - feel free to use this code for your own portfolio!
 ## 🤝 Contributing
 
 This is a personal portfolio, but suggestions and feedback are welcome! Feel free to open an issue.
-
-## 📧 Contact
-
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- GitHub: [@yourusername](https://github.com/yourusername)
-
----
-
-Built with ❤️ using vanilla JavaScript and Firebase
