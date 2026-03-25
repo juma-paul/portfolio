@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Juma Paul</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#" class="logo">Juma Paul</a>
+        <div class="nav-right">
+          <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#writing">Writing</a></li>
+          </ul>
+          <button id="theme-toggle" aria-label="Toggle theme"></button>
+          <button id="menu-toggle" aria-label="Menu">Menu</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero">
+        <h1>Juma Paul</h1>
+        <p class="tagline">Software Engineer</p>
+        <p class="intro">Turning code into products that make life easier.</p>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <h2>About</h2>
+        <div class="about-content">
+          <img src="./assets/images/head-shot.jpg" alt="Juma Paul" class="profile-img" />
+          <div class="about-text">
+            <p>
+              I'm a Computer Science graduate passionate about building software and AI solutions that solve real-world problems. I specialize in full-stack development and machine learning, with hands-on experience in building end-to-end applications. I enjoy making complex technology useful for people and organizations. I'm always curious, eager to learn, and looking to collaborate on projects that make a real difference.
+            </p>
+            <div class="skills" id="skills-container"></div>
+            <div class="certifications">
+              <p class="cert-label">Certifications</p>
+              <ul id="certs-container"></ul>
+            </div>
+            <a href="./assets/resume.pdf" download class="resume-link">Download Resume</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="filter-buttons">
+          <button data-category="all" class="active">All</button>
+          <button data-category="full-stack">Full Stack</button>
+          <button data-category="backend">Backend</button>
+          <button data-category="data-science">ML/Data</button>
+          <button data-category="tools">Tools</button>
+        </div>
+        <div class="projects-carousel">
+          <button class="carousel-btn prev" aria-label="Previous">&larr;</button>
+          <div class="projects-track" id="projects-container"></div>
+          <button class="carousel-btn next" aria-label="Next">&rarr;</button>
+        </div>
+      </section>
+
+      <!-- Writing -->
+      <section id="writing">
+        <h2>Writing</h2>
+        <ul id="blog-container"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-cta">Get in touch</p>
+        <div class="social-links">
+          <a href="https://github.com/juma-paul" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/juma-paul/" target="_blank">LinkedIn</a>
+          <a href="https://x.com/_jumaPaul" target="_blank">X</a>
+        </div>
+        <p class="copyright">&copy; <span id="copyright-year"></span> Juma Paul</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
