@@ -1,14 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon_io/favicon-16x16.png"
+    />
     <link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
     <link rel="stylesheet" href="./style.css" />
     <title>Juma Paul</title>
@@ -16,7 +33,12 @@
   <body>
     <header>
       <nav>
-        <a href="#" class="logo">Juma Paul</a>
+        <a href="#" class="logo">
+          <img
+            src="./assets/favicon_io/favicon-32x32.png"
+            alt="Juma Paul Logo"
+          />
+        </a>
         <div class="nav-right">
           <ul class="nav-menu">
             <li><a href="#about">About</a></li>
@@ -32,26 +54,47 @@
     <main>
       <!-- Hero -->
       <section id="hero">
-        <h1>Juma Paul</h1>
-        <p class="tagline">Software Engineer</p>
-        <p class="intro">Turning code into products that make life easier.</p>
+        <div class="name-and-title">
+          <h1>Juma Paul</h1>
+          <p class="title">Software Engineer</p>
+        </div>
+        <p class="tagline">Turning code into products that make life easier.</p>
       </section>
 
       <!-- About -->
       <section id="about">
         <h2>About</h2>
         <div class="about-content">
-          <img src="./assets/images/head-shot.jpg" alt="Juma Paul" class="profile-img" />
+          <img
+            src="./assets/images/head-shot.jpg"
+            alt="Juma Paul"
+            class="profile-img"
+          />
           <div class="about-text">
-            <p>
-              I'm a Computer Science graduate passionate about building software and AI solutions that solve real-world problems. I specialize in full-stack development and machine learning, with hands-on experience in building end-to-end applications. I enjoy making complex technology useful for people and organizations. I'm always curious, eager to learn, and looking to collaborate on projects that make a real difference.
+            <p class="profile-txt">
+              I'm a Full-Stack Software Engineer passionate about building
+              software and AI-powered solutions that solve real-world problems.
+              I specialize in developing end-to-end applications using
+              TypeScript, Python, Node.js, and FastAPI, with experience building
+              APIs, machine learning systems, and data-driven products.
             </p>
+
+            <p>
+              My work includes developing production-ready tools, such as a
+              published PyPI CLI used for algorithm practice, machine learning
+              classifiers, and full-stack web applications. I enjoy making
+              complex technology useful for people and organizations, and I'm
+              always curious, eager to learn, and looking to collaborate on
+              projects that make a real difference.
+            </p>
+            <a href="./assets/resume.pdf" download class="resume-link"
+              >Download Resume</a
+            >
             <div class="skills" id="skills-container"></div>
             <div class="certifications">
               <p class="cert-label">Certifications</p>
               <ul id="certs-container"></ul>
             </div>
-            <a href="./assets/resume.pdf" download class="resume-link">Download Resume</a>
           </div>
         </div>
       </section>
@@ -67,7 +110,9 @@
           <button data-category="tools">Tools</button>
         </div>
         <div class="projects-carousel">
-          <button class="carousel-btn prev" aria-label="Previous">&larr;</button>
+          <button class="carousel-btn prev" aria-label="Previous">
+            &larr;
+          </button>
           <div class="projects-track" id="projects-container"></div>
           <button class="carousel-btn next" aria-label="Next">&rarr;</button>
         </div>
@@ -85,10 +130,14 @@
         <p class="footer-cta">Get in touch</p>
         <div class="social-links">
           <a href="https://github.com/juma-paul" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/juma-paul/" target="_blank">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/juma-paul/" target="_blank"
+            >LinkedIn</a
+          >
           <a href="https://x.com/_jumaPaul" target="_blank">X</a>
         </div>
-        <p class="copyright">&copy; <span id="copyright-year"></span> Juma Paul</p>
+        <p class="copyright">
+          &copy; <span id="copyright-year"></span> Juma Paul
+        </p>
       </div>
     </footer>
 

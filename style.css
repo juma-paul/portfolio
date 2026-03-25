@@ -89,30 +89,32 @@ footer {
    ============================= */
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(1.5rem, 2.2vw, 2.8rem);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
 
 h2 {
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  margin-bottom: 0.5rem;
 }
 
+p.profile-txt {
+  margin-bottom: 1.5rem;
+}
 /* =============================
    NAVIGATION
    ============================= */
 
-.logo {
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--text);
-  text-decoration: none;
+.logo img {
+  height: 32px;
+  width: auto;
+  display: block;
 }
 
 .nav-right {
@@ -174,23 +176,40 @@ h2 {
   background:
     radial-gradient(circle, var(--text-tertiary) 1px, transparent 1px),
     linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg) 100%);
-  background-size: 24px 24px, cover;
+  background-size:
+    24px 24px,
+    cover;
   margin: 0 -2rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
-.tagline {
+.name {
+  font-size: 1rem;
+}
+
+.name-and-title {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+.title::before {
+  content: "|";
+  margin-right: 1.5rem;
+  color: #aaa;
+}
+
+.title {
   font-size: 1.25rem;
   color: var(--text-secondary);
   margin-top: 0.5rem;
 }
 
-.intro {
+.tagline {
   font-size: 1.125rem;
   color: var(--text-tertiary);
   margin-top: 1rem;
-  max-width: 400px;
 }
 
 /* =============================
@@ -204,21 +223,23 @@ h2 {
 }
 
 .profile-img {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 8px;
   object-fit: cover;
 }
 
 .about-text {
-  flex: 1;
-  max-width: 600px;
+  max-width: auto;
 }
 
 .about-text p {
   color: var(--text-secondary);
   font-size: 1.125rem;
   line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .skills {
@@ -457,7 +478,9 @@ h2 {
   content: "→";
   margin-left: auto;
   color: var(--text-tertiary);
-  transition: transform 0.2s, color 0.2s;
+  transition:
+    transform 0.2s,
+    color 0.2s;
 }
 
 .blog-item a:hover {
@@ -557,8 +580,8 @@ h2 {
   }
 
   .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
   }
 
   .projects-track {
