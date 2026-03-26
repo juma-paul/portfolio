@@ -39,14 +39,18 @@
             alt="Juma Paul Logo"
           />
         </a>
+
         <div class="nav-right">
           <ul class="nav-menu">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#writing">Writing</a></li>
           </ul>
-          <button id="theme-toggle" aria-label="Toggle theme"></button>
-          <button id="menu-toggle" aria-label="Menu">Menu</button>
+
+          <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle theme"></button>
+            <button id="menu-toggle" aria-label="Menu">Menu</button>
+          </div>
         </div>
       </nav>
     </header>
@@ -55,8 +59,16 @@
       <!-- Hero -->
       <section id="hero">
         <div class="name-and-title">
-          <h1>Juma Paul</h1>
-          <p class="title">Software Engineer</p>
+          <h1 class="name">Juma Paul</h1>
+
+          <div class="right-space">
+            <div class="upper-space"></div>
+            <!-- empty above line -->
+            <div class="line"></div>
+            <!-- blue line in middle -->
+            <p class="title">Software Engineer</p>
+            <!-- below line -->
+          </div>
         </div>
         <p class="tagline">Turning code into products that make life easier.</p>
       </section>
@@ -87,14 +99,14 @@
               always curious, eager to learn, and looking to collaborate on
               projects that make a real difference.
             </p>
-            <a href="./assets/resume.pdf" download class="resume-link"
-              >Download Resume</a
-            >
-            <div class="skills" id="skills-container"></div>
             <div class="certifications">
               <p class="cert-label">Certifications</p>
               <ul id="certs-container"></ul>
             </div>
+            <a href="./assets/resume.pdf" download class="resume-link"
+              >Download Resume</a
+            >
+            <div class="skills" id="skills-container"></div>
           </div>
         </div>
       </section>
@@ -127,7 +139,6 @@
 
     <footer>
       <div class="footer-content">
-        <p class="footer-cta">Get in touch</p>
         <div class="social-links">
           <a href="https://github.com/juma-paul" target="_blank">GitHub</a>
           <a href="https://www.linkedin.com/in/juma-paul/" target="_blank"

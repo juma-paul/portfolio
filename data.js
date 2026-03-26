@@ -89,11 +89,19 @@ export const projects = [
 
 export const blogPosts = [
   {
-    title: "How i built a production grade Authh Service",
+    title: "Why client-side auth guards aren't enough - edge middleware explained",
     url: "https://medium.com/@juma_/customizing-your-zsh-shell-on-macos-0791d346c000",
   },
   {
-    title: "Customizing Your zsh Shell on macOS",
+    title: "How to handle JWT refresh tokens properly in Next.js - the production way",
+    url: "https://medium.com/@juma_/customizing-your-zsh-shell-on-macos-0791d346c000",
+  },
+  {
+    title: "How i built a production grade auth service",
+    url: "https://medium.com/@juma_/customizing-your-zsh-shell-on-macos-0791d346c000",
+  },
+  {
+    title: "Customizing your zsh shell on macOS",
     url: "https://medium.com/@juma_/customizing-your-zsh-shell-on-macos-0791d346c000",
   },
 ];
