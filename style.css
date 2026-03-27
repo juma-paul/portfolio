@@ -212,7 +212,7 @@ nav {
 }
 
 .name {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 8vw, 7rem);
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
@@ -244,10 +244,10 @@ nav {
 
 /* --- Tagline --- */
 .tagline {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   color: var(--text-tertiary);
-  margin-top: 1rem;
-  padding-left: 10rem;
+  margin-top: 0rem;
+  padding-left: 16.5rem;
 }
 
 /* =============================
