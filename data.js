@@ -30,7 +30,7 @@ export const projects = [
   {
     title: "Project One",
     description: "A full-stack application that does something useful.",
-    image: "./assets/images/head-shot.jpg",
+    image: "https://placehold.co/600x400/1a1a1a/666?text=Project+1",
     skills: ["Next.js", "TypeScript", "PostgreSQL"],
     category: "full-stack",
     github: "https://github.com/juma-paul/project-1",

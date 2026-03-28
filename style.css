@@ -200,7 +200,8 @@ nav {
   background-size:
     24px 24px,
     cover;
-  margin: 6rem -2rem 0 -2rem;
+  margin-inline: -2rem;
+  margin-top: 6rem;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -213,7 +214,7 @@ nav {
 }
 
 .name {
-  font-size: clamp(2rem, 8vw, 7rem);
+  font-size: clamp(2.5rem, 7vw, 6rem);
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
@@ -224,6 +225,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   flex: 1;
+  transform: translateY(-20px);
 }
 
 .upper-space {
@@ -231,14 +233,14 @@ nav {
 }
 
 .line {
-  border-top: 1px solid var(--accent);
+  border-top: 1.7px solid var(--accent);
   height: 0;
   width: 100%;
 }
 
 .title {
-  margin: 0;
-  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
   color: var(--text-secondary);
   text-align: left;
 }
@@ -247,8 +249,9 @@ nav {
 .tagline {
   font-size: 1.5rem;
   color: var(--text-tertiary);
-  margin-top: 0rem;
-  padding-left: 16.5rem;
+  transform: translateY(-25px);
+  text-align: center;
+  align-self: center;
 }
 
 /* =============================
