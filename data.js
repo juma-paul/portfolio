@@ -101,7 +101,7 @@ export const blogPosts = [
   {
     title:
       "I Built a Self-Hosted Auth System Like Clerk — Here's What I Learned",
-    url: "https://dev.to/alquatra/i-built-a-self-hosted-auth-system-like-clerk-heres-what-i-learned-fnc",
+    url: "https://dev.to/juma-paul/i-built-a-self-hosted-auth-system-like-clerk-heres-what-i-learned-fnc",
   },
   {
     title: "Customizing your zsh shell on macOS",
