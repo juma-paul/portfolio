@@ -5,8 +5,6 @@
 
 Minimal, responsive portfolio site showcasing my projects, skills, and experience.
 
-![Portfolio Screenshot](assets/images/preview.png)
-
 ---
 
 ## Tech Stack
@@ -47,6 +45,11 @@ Visit:
 ```
 http://localhost:3000
 ```
+
+---
+
+## Preview
+<img src="assets/images/preview.png" alt="Portfolio Screenshot" width="500">
 
 ---
 
