@@ -28,13 +28,23 @@ export const certifications = ["AWS Certified AI Practitioner"];
 
 export const projects = [
   {
-    title: "Project One",
-    description: "A full-stack application that does something useful.",
-    image: "https://placehold.co/600x400/1a1a1a/666?text=Project+1",
-    skills: ["Next.js", "TypeScript", "PostgreSQL"],
+    title: "AuthKit — Self-Hosted Identity Infrastructure",
+    description:
+      "Multi-tenant authentication API with production-ready Next.js client. OAuth, 2FA, JWT rotation — 196 tests, 71% coverage.",
+    image: "assets/images/authkit.png",
+    skills: [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Next.js",
+      "React",
+      "Docker",
+      "GCP",
+    ],
     category: "full-stack",
-    github: "https://github.com/juma-paul/project-1",
-    live: "https://project-1.vercel.app",
+    github: "https://github.com/juma-paul/authkit",
+    live: "https://authkit-demo-six.vercel.app",
   },
   {
     title: "Project Two",
@@ -89,16 +99,9 @@ export const projects = [
 
 export const blogPosts = [
   {
-    title: "Why client-side auth guards aren't enough - edge middleware explained",
-    url: "https://medium.com/@juma_/customizing-your-zsh-shell-on-macos-0791d346c000",
-  },
-  {
-    title: "How to handle JWT refresh tokens properly in Next.js - the production way",
-    url: "https://medium.com/@juma_/customizing-your-zsh-shell-on-macos-0791d346c000",
-  },
-  {
-    title: "How i built a production grade auth service",
-    url: "https://medium.com/@juma_/customizing-your-zsh-shell-on-macos-0791d346c000",
+    title:
+      "I Built a Self-Hosted Auth System Like Clerk — Here's What I Learned",
+    url: "https://dev.to/alquatra/i-built-a-self-hosted-auth-system-like-clerk-heres-what-i-learned-fnc",
   },
   {
     title: "Customizing your zsh shell on macOS",
